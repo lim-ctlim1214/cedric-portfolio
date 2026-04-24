@@ -63,6 +63,10 @@ h1 {
     gap: 1rem;
 }
 
+.content.centered {
+    align-items: center;
+}
+
 .profile-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -134,6 +138,14 @@ h1 {
     color: black;
 }
 
+.self-card h3 {
+    font-weight: bold;
+}
+
+.self-card h3 span {
+    font-weight: normal;
+}
+
 .about-me-text {
     gap: 1rem;
 }
@@ -160,6 +172,31 @@ h1 {
     justify-content: center;
 }
 
+.schedule {
+    border: white 1px solid;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.schedule td {
+    padding: 0.6rem;
+}
+
+.major {
+    background-color: aliceblue;
+    color: black;
+}
+
+.minor {
+    background-color: springgreen;
+    color: black;
+}
+
+.online {
+    background-color: yellow;
+    color: black;
+}
+
 .button-rounded {
     padding: 0.5rem;
     background: white;
@@ -174,6 +211,33 @@ h1 {
     background-color: black;
     color: white;
     transition: 0.3s ease background-color, 0.3s ease color;
+}
+
+.chips {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.chip {
+    border: 2px solid #c900ff;
+    border-radius: 20px;
+    padding: 0.5rem;
+    color: black;
+}
+
+.chip p {
+    margin: 0;
+}
+
+.big-chip {
+    background-color: #dadada;
+    color: black;
+    padding: 0.5rem 4rem;
+    text-align: center;
+    max-width: 1200px;
+    border-radius: 0.2rem;
 }
 
 .skill-issue {
