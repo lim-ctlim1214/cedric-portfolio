@@ -280,6 +280,30 @@ h1 {
     object-fit: cover;
 }
 
+.qna-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.qna-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.qna {
+    background-color: #e3e3e3;
+    color: black;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.qna p {
+    font-size: 14px;
+    text-align: justify;
+}
+
 @media (max-width: 900px){
 
     .content-wrapper {
@@ -300,6 +324,10 @@ h1 {
 
     .about-wrapper {
         display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .qna-grid {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -347,6 +375,10 @@ h1 {
 
     .about-wrapper {
         display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .qna-grid {
         grid-template-columns: 1fr;
     }
 }
