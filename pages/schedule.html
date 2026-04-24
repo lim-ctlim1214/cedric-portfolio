@@ -19,7 +19,7 @@
         </ul>
     </div>
     <section class="content centered">
-        <h1 style="text-align: center">Cedric's Schedule</h1>
+        <h1 style="text-align: center" id="title-heading">Cedric's Schedule</h1>
         <table border="white" class="schedule" >
             <tr>
                 <th>Time</th>
@@ -32,53 +32,53 @@
             </tr>
             <tr>
                 <td>7:30-9:00</td>
-                <td class="major">ITCC 21.1<br>7:30-9:00</td>
+                <td class="major monday">ITCC 21.1<br>7:30-9:00</td>
                 <td></td>
                 <td></td>
-                <td class="online">ITCC 21.1<br>7:30-9:00</td>
+                <td class="online thursday">ITCC 21.1<br>7:30-9:00</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>9:00-10:30</td>
-                <td class="minor">GE 14<br>9:00-10:30</td>
-                <td class="major">ITCC 21.1<br>8:30-10:30</td>
+                <td class="minor monday">GE 14<br>9:00-10:30</td>
+                <td class="major tuesday">ITCC 21.1<br>8:30-10:30</td>
                 <td></td>
-                <td class="online">GE 14<br>9:00-10:30</td>
-                <td class="major">CC 15<br>9:00-12:00</td>
-                <td class="major">ITCC 13.1<br>9:00-12:00</td>
+                <td class="online thursday">GE 14<br>9:00-10:30</td>
+                <td class="major friday">CC 15<br>9:00-12:00</td>
+                <td class="major saturday">ITCC 13.1<br>9:00-12:00</td>
             </tr><tr>
                 <td>10:30-12:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td class="online">CC 15<br>10:30-12:30</td>
-                <td class="major">CC 15<br>9:00-12:00</td>
-                <td class="major">ITCC 13.1<br>9:00-12:00</td>
+                <td class="online thursday">CC 15<br>10:30-12:30</td>
+                <td class="major friday">CC 15<br>9:00-12:00</td>
+                <td class="major saturday">ITCC 13.1<br>9:00-12:00</td>
             </tr>
             <tr>
                 <td>1:30-3:00</td>
-                <td class="minor">PE 14<br>1:00-3:00</td>
-                <td class="major">ITCC 11.1<br>1:00-3:00</td>
+                <td class="minor monday">PE 14<br>1:00-3:00</td>
+                <td class="major tuesday">ITCC 11.1<br>1:00-3:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr><tr>
                 <td>3:00-4:30</td>
-                <td class="minor">ENGL 5<br>3:00-4:30</td>
-                <td class="major">ITCC 11.1<br>3:00-6:00</td>
+                <td class="minor monday">ENGL 5<br>3:00-4:30</td>
+                <td class="major tuesday">ITCC 11.1<br>3:00-6:00</td>
                 <td></td>
-                <td class="online">ENGL 5<br>3:00-4:30</td>
-                <td class="major">ITCC 13.1<br>3:00-5:00</td>
+                <td class="online thursday">ENGL 5<br>3:00-4:30</td>
+                <td class="major friday">ITCC 13.1<br>3:00-5:00</td>
                 <td></td>
             </tr>
             <tr>
                 <td>4:30-6:00</td>
-                <td class="minor">FIL 75<br>4:30-6:00</td>
-                <td class="major">ITCC 11.1<br>3:00-6:00</td>
+                <td class="minor monday">FIL 75<br>4:30-6:00</td>
+                <td class="major tuesday">ITCC 11.1<br>3:00-6:00</td>
                 <td></td>
-                <td class="online">FIL 75<br>4:30-6:00</td>
+                <td class="online thursday">FIL 75<br>4:30-6:00</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -94,11 +94,28 @@
                 <p>Online</p>
             </div>
         </section>
-        <section class="big-chip">
-            <h1>Wednesdays?</h1>
-            <p>No Wednesdays! I am free all Wednesday!</p>
+        <section class="chip-container">
+            <article class="big-chip">
+                <h1>Wednesdays?</h1>
+                <p>No Wednesdays! I am free all Wednesday!</p>
+            </article>
+            <article class="big-chip">
+                <h2>Am I Free Right Now?</h2>
+                <a class="button-rounded" id="schedfinder">Click me to find out!</a>
+                <p class="hidden" id="availability-indicator">I am! Feel free to contact me!</p>
+            </article>
+            <article class="big-chip">
+                <h1>When to Reach You?</h1>
+                <p>The best time to reach me is when I have no class! Wednesday and the Weekends should do!</p>
+            </article>
+
         </section>
+
     </section>
+    <footer class="page-footer">
+        <p>Made by Cedric Lim for Frontend Challenge 3.0 - ITCC 13.1</p>
+    </footer>
 </div>
 </body>
+<script src="../js/schedule.js"></script>
 </html>
