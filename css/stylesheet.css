@@ -294,8 +294,13 @@ h1 {
         grid-template-columns: 1fr;
     }
 
-    .monday, .tuesday, .wednesday, .thursday, .friday, .saturday {
-        display: none;
+    .about-me {
+        grid-template-columns: 1fr;
+    }
+
+    .about-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -331,4 +336,17 @@ h1 {
         display: none;
     }
 
+    .about-me {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }

@@ -12,7 +12,7 @@ schedfinder.addEventListener("click", (e) => {
 
 let today = new Date();
 function mobile_support(){
-    if (window.innerWidth > 1000) return;
+    if (window.innerWidth > 800) return;
     let selector = "." + today.toLocaleDateString('en-US', {
         weekday: 'long'
     }).toLowerCase()
