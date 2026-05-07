@@ -1,16 +1,18 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    background-color: #171d24;
-    color: white;
-    font-family: 'Roboto';
     align-items: center;
     overflow-x: hidden;
+    background-color: #171d24;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
+
+
 
 h1 {
     font-size: clamp(1.2rem, 4vw, 2rem);
@@ -24,43 +26,13 @@ h1 {
     padding: 0 1rem;
 }
 
-.nav {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: 1rem;
-    align-items: center;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: white;
-}
-
-.nav-link.active {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.headings {
-    display: flex;
-    flex-direction: row;
-    background-color: black;
-    border: 1px solid #494949;
-    border-radius: 8px;
-    padding-left: 1rem;
-    width: 100%;
-    ;
-}
-
 .content {
     display: flex;
     flex-direction: column;
-    font-family: 'Inter', sans-serif;
-    padding: 1rem;
     flex: 1;
     gap: 1rem;
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .content.centered {
@@ -79,40 +51,9 @@ h1 {
     gap: 1rem;
 }
 
-.profile {
-    display: flex;
-    flex-direction: column;
-    background-color: #e3e3e3;
-    border: 1px solid white;
-    border-radius: 1rem;
-    padding: 1rem;
-    color: black;
-}
-
-.profile.centered {
-    align-items: center;
-    text-align: center;
-}
-
-.profile p {
-    margin-top: 0;
-}
-
-.projects {
-    display: flex;
-    flex-direction: column;
-    background-color: #e3e3e3;
-    color: black;
-    border: 1px solid white;
-    border-radius: 1rem;
-    padding: 1rem;
-    flex: 1;
-    text-align: center;
-}
-
 .project-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
@@ -128,22 +69,156 @@ h1 {
     gap: 1rem;
 }
 
-.photo-container {
+.about-wrapper {
     display: flex;
-    flex-direction: row;
-    padding: 0.5rem;
-    background-color: #e3e3e3;
-    border-radius: 1rem;
+    flex-direction: column;
     gap: 0.5rem;
-    color: black;
 }
 
-.self-card h3 {
+.chip-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.qna-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.heading-button {
+    color: white;
+    align-self: center;
+}
+
+.nav-link.active {
+    font-size: 20px;
     font-weight: bold;
 }
 
-.self-card h3 span {
-    font-weight: normal;
+.headings {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 1rem;
+    border: 1px solid #494949;
+    border-radius: 8px;
+    background-color: black;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: #e3e3e3;
+    color: black;
+}
+
+.profile.centered {
+    align-items: center;
+    text-align: center;
+}
+
+.profile p {
+    margin-top: 0;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: #e3e3e3;
+    color: black;
+    text-align: center;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid #a8a8a8;
+    border-radius: 1rem;
+    background-color: #d5d5d5;
+}
+
+.photo-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #e3e3e3;
+    color: black;
+}
+
+.self-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: #e3e3e3;
+    color: black;
+    font-family: 'Inter', sans-serif;
+}
+
+.self-card h3 { font-weight: bold; }
+.self-card h3 span { font-weight: normal; }
+
+.qna-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.qna {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #e3e3e3;
+    color: black;
+}
+
+.qna p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #dadada;
+    color: black;
+}
+
+.big-chip {
+    max-width: 1200px;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    background-color: #dadada;
+    color: black;
+    text-align: center;
 }
 
 .about-me-text {
@@ -154,65 +229,6 @@ h1 {
     margin-top: -20px;
 }
 
-.about-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.self-card {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Inter', sans-serif;
-    background-color: #e3e3e3;
-    border: 1px solid white;
-    color: black;
-    border-radius: 1rem;
-    padding-left: 1rem;
-    justify-content: center;
-}
-
-.schedule {
-    border: white 1px solid;
-    text-align: center;
-    border-collapse: collapse;
-}
-
-.schedule td {
-    padding: 0.6rem;
-}
-
-.major {
-    background-color: aliceblue;
-    color: black;
-}
-
-.minor {
-    background-color: springgreen;
-    color: black;
-}
-
-.online {
-    background-color: yellow;
-    color: black;
-}
-
-.button-rounded {
-    padding: 0.5rem;
-    background: white;
-    border: 1px solid black;
-    border-radius: 1rem;
-    text-decoration: none;
-    color: black;
-    transition: 0.3s ease background-color, 0.3s ease color;
-}
-
-.button-rounded:hover {
-    background-color: black;
-    cursor: pointer;
-    color: white;
-    transition: 0.3s ease background-color, 0.3s ease color;
-}
 
 .chips {
     display: flex;
@@ -222,56 +238,51 @@ h1 {
 }
 
 .chip {
+    padding: 0.5rem;
     border: 2px solid #c900ff;
     border-radius: 20px;
-    padding: 0.5rem;
     color: black;
-}
-
-.chip-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-}
-
-.hidden {
-    display: none;
 }
 
 .chip p {
     margin: 0;
 }
 
-.big-chip {
-    background-color: #dadada;
-    color: black;
-    padding: 1rem 4rem;
-    text-align: center;
-    max-width: 1200px;
+.button-rounded {
+    padding: 0.5rem;
+    border: 1px solid black;
     border-radius: 1rem;
+    background: white;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.button-rounded:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+.schedule {
+    border: 1px solid white;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.schedule td {
+    padding: 0.6rem;
+}
+
+.major  { background-color: aliceblue;   color: black; }
+.minor  { background-color: springgreen; color: black; }
+.online { background-color: yellow;      color: black; }
+
 
 .skill-issue {
     width: 100%;
     height: auto;
-}
-
-.project-card {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: #d5d5d5;
-    border-radius: 1rem;
-    border: 1px solid #a8a8a8;
-}
-
-.page-footer {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: #dadada;
-    border-radius: 1rem;
-    color: black;
 }
 
 .project-img {
@@ -280,59 +291,23 @@ h1 {
     object-fit: cover;
 }
 
-.qna-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.hidden {
+    display: none;
 }
 
-.qna-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 0.5rem;
+
+@media (max-width: 1024px) {
+    .content-wrapper  { grid-template-columns: 1fr; }
+    .project-wrapper  { grid-template-columns: 1fr 1fr; }
+    .chip-container   { grid-template-columns: 1fr; }
+    .about-me         { grid-template-columns: 1fr; }
+    .about-wrapper    { display: grid; grid-template-columns: 1fr 1fr; }
+    .qna-grid         { grid-template-columns: 1fr 1fr; }
 }
 
-.qna {
-    background-color: #e3e3e3;
-    color: black;
-    border-radius: 1rem;
-    padding: 1rem;
-}
 
-.qna p {
-    font-size: 14px;
-    text-align: justify;
-}
 
-@media (max-width: 1024px){
-
-    .content-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .project-wrapper {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .chip-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-me {
-        grid-template-columns: 1fr;
-    }
-
-    .about-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .qna-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .headings {
         flex-direction: column;
         align-items: flex-start;
@@ -344,41 +319,15 @@ h1 {
         padding-left: 0;
     }
 
-    .project-wrapper {
-        grid-template-columns: 1fr;
-    }
+    .photo-container  { flex-direction: column; }
+    .profile-wrapper  { grid-template-columns: 1fr; }
+    .content-wrapper  { grid-template-columns: 1fr; }
+    .project-wrapper  { grid-template-columns: 1fr; }
+    .chip-container   { grid-template-columns: 1fr; }
+    .about-me         { grid-template-columns: 1fr; }
+    .about-wrapper    { display: grid; grid-template-columns: 1fr; }
+    .qna-grid         { grid-template-columns: 1fr; }
 
-    .profile-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .content-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .chip-container {
-        grid-template-columns: 1fr;
-    }
-
-    .monday, .tuesday, .wednesday, .thursday, .friday, .saturday, td, th {
-        display: none;
-    }
-
-    .about-me {
-        grid-template-columns: 1fr;
-    }
-
-    .photo-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-wrapper {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .qna-grid {
-        grid-template-columns: 1fr;
-    }
+    .monday, .tuesday, .wednesday, .thursday,
+    .friday, .saturday, td, th { display: none; }
 }
